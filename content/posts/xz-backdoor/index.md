@@ -23,7 +23,7 @@ xz is a common dependency for both sshd and systemd on systems that selectively 
 has a pretty dramatic attack surface. Distributions like Kali/Arch were "compromised" (though the effects of this compromise are both
 are incredibly limited and very niche, to the point where there is an incredibly limited threat to end users despite common Internet sentiment.)
 
-To avoid rehashing the entirity of the article, which you can [read here](https://www.openwall.com/lists/oss-security/2024/03/29/4), the backdoored
+To avoid rehashing the entirety of the article, which you can [read here](https://www.openwall.com/lists/oss-security/2024/03/29/4), the backdoored
 xz tarball builds liblzma with a bit of code inserted to manipulate the PLT of `RSA_public_decrypt` to its own function, essentially arbitrarily
 replacing that code with its own.
 
