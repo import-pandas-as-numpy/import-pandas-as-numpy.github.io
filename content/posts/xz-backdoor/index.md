@@ -3,6 +3,7 @@ title: "The XZ Backdoor Dilemma"
 date: 2024-03-31T00:00:00-05:00
 draft: false
 tags: ['open source','security']
+summary: "No-lone zones are ubiquitous with critical military tasks, and the scope and potential impact of the xz backdoor present an excellent opportunity to discuss how this could be applied to open source software."
 ---
 
 There's a lot of information floating around right now on the xz backdoor.
