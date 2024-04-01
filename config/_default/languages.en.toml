@@ -1,0 +1,19 @@
+languageCode = "en"
+languageName = "English"
+weight = 1
+title = "sudo rem"
+
+[params]
+displayName = "EN"
+isoCode = "en"
+rtl = false
+dateFormat = "2 January 2006"
+description = "A personal blog for malware analysis, open source security, capture the flags, and all things information security."
+logo = "vipyrlogocolor.png"
+
+[author]
+name = "sudorem"
+headline = "Malware Analyst, OSS Security Enthusiast"
+links = [ { github = "https://github.com/import-pandas-as-numpy" }, { mastodon = "https://fosstodon.org/@sudo_rem" }, { twitter = "https://twitter.com/sudo_Rem" } ]
+image = "otterpfp.png"
+bio = "Incident Handler | Founder, Vipyr Security"

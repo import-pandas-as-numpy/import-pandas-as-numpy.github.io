@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on sudo rem</title>
+    <link>//localhost:1313/tags/</link>
+    <description>Recent content in Tags on sudo rem</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <copyright>© 2024 sudorem</copyright>
+    <lastBuildDate>Sun, 31 Mar 2024 00:00:00 -0500</lastBuildDate><atom:link href="//localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Open Source</title>
+      <link>//localhost:1313/tags/open-source/</link>
+      <pubDate>Sun, 31 Mar 2024 00:00:00 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/open-source/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>//localhost:1313/tags/security/</link>
+      <pubDate>Sun, 31 Mar 2024 00:00:00 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/security/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Cryptography</title>
+      <link>//localhost:1313/tags/cryptography/</link>
+      <pubDate>Tue, 26 Mar 2024 16:00:00 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/cryptography/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Ctf</title>
+      <link>//localhost:1313/tags/ctf/</link>
+      <pubDate>Tue, 26 Mar 2024 16:00:00 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/ctf/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>General</title>
+      <link>//localhost:1313/tags/general/</link>
+      <pubDate>Tue, 26 Mar 2024 16:00:00 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/general/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pico</title>
+      <link>//localhost:1313/tags/pico/</link>
+      <pubDate>Tue, 26 Mar 2024 16:00:00 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/pico/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Reverse Engineering</title>
+      <link>//localhost:1313/tags/reverse-engineering/</link>
+      <pubDate>Tue, 26 Mar 2024 16:00:00 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/reverse-engineering/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Malware</title>
+      <link>//localhost:1313/tags/malware/</link>
+      <pubDate>Sat, 22 Jul 2023 14:01:23 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/malware/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>//localhost:1313/tags/python/</link>
+      <pubDate>Sat, 22 Jul 2023 14:01:23 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/python/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Pypi</title>
+      <link>//localhost:1313/tags/pypi/</link>
+      <pubDate>Fri, 14 Jul 2023 16:22:24 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/pypi/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Social Media</title>
+      <link>//localhost:1313/tags/social-media/</link>
+      <pubDate>Thu, 13 Jul 2023 20:15:48 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/social-media/</guid>
+      <description></description>
+      
+    </item>
+    
+    <item>
+      <title>Deobfuscation</title>
+      <link>//localhost:1313/tags/deobfuscation/</link>
+      <pubDate>Wed, 12 Jul 2023 14:05:32 -0500</pubDate>
+      
+      <guid>//localhost:1313/tags/deobfuscation/</guid>
+      <description></description>
+      
+    </item>
+    
+  </channel>
+</rss>
