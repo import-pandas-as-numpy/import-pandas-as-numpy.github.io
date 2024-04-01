@@ -10,21 +10,21 @@ I have very few doubts that over the next few weeks/months, we'll be inundated w
 regarding how we should've seen this, how open-source software is a security vulnerability in itself,
 and that if we simply paid developers more, the solution would magic itself away.
 
-While some of these are true-- notably that open-source software developers largely prop up the backbone of the internet,
+While some of these are true-- notably that open-source software developers generally prop up the backbone of the internet,
 I'd feel remiss if I didn't add some level of commentary on the whole issue from the perspective of someone dealing with the actions
 and consequences of open source security in general.
 
 ## Background
 
 First, to offer an at-a-glance background of what exactly motivated this article. On March 29, 2024, Andres Freund
-posted to the OpenWall mailing list that he'd found a vulnerability in the xz software. Specifically, a backdoor.
+posted to the [OpenWall mailing list](https://www.openwall.com/lists/oss-security/2024/03/29/4) that he'd found a vulnerability in the xz software. Specifically, a backdoor.
 
 xz is a common dependency for both sshd and systemd on systems that selectively utilize both of these services, and
 has a pretty dramatic attack surface. Distributions like Kali/Arch were "compromised" (though the effects of this compromise are both
 are incredibly limited and very niche, to the point where there is an incredibly limited threat to end users despite common Internet sentiment.)
 
-To avoid rehashing the entirety of the article, which you can [read here](https://www.openwall.com/lists/oss-security/2024/03/29/4), the backdoored
-xz tarball builds liblzma with a bit of code inserted to manipulate the PLT of `RSA_public_decrypt` to its own function, essentially arbitrarily
+To avoid rehashing the entirety of the article, the backdoored xz tarball builds liblzma with a bit of code
+inserted to manipulate the PLT of `RSA_public_decrypt` to its own function, essentially arbitrarily
 replacing that code with its own.
 
 This has a number of *possible* consequences, and while I'll avoid speculating publicly, there's a [fair bit of research](https://bsky.app/profile/filippo.abyssdomain.expert/post/3kowjkx2njy2b)
@@ -37,34 +37,35 @@ mature, sophisticated, and well thought out.
 ## Is Open Source Software a Security Risk?
 
 This is the question on everyone's mind right now. When we think of open source software, minds will generally wander to the idea
-that we're just arbitrarily pulling packages off of Github sight unseen. I'm not sure if this is a reality though in most ecosystems.
+that we're just arbitrarily pulling packages off of Github sight unseen. I'm not sure if this is a reality though in most ecosystems,
+and even in these cases, there are steps we can start to take to defend ourselves. Chiefly, observing the way we maintain open source software itself.
 
-A lot of this commentary is going to be framed from the perspective of the Python ecosystem, but I think it has some level of translation across
-almost every ecosystem anyway. When we look at major package creators (think, Numpy, Pandas, Black, etc.) we're looking at maintainer teams,
-not singular maintainers propping up a major project. This, in my mind, is the singular and most compelling failure in the xz fiasco in general.
-
-It kind of baffles me that a singular maintainer was left in charge of this package, and their commits went more or less entirely unchecked.
+It baffles me that a singular maintainer was left in charge of this package, and their commits went more or less entirely unchecked.
 The wonders of having a team responsible of a large project isn't just that the responsibility is divided; but it is also that you can implement a more robust code
-review processes in general.
+review processes in general. This, to me personally, represents the biggest failure in the xz events.
 
-What does this look like at an organizational level? At Vipyr, the open-source software security organization that I run, we have a review process
-that compells individuals via codeowner files to perform security and core developer reviews. These individuals can never be the initial committer,
-and except in extremely rare cases, cannot be the same person. (For transparency, organizational administrators reserve the ability to perform code-review
-and security reviews simultaneously, but still cannot side-step the requirement for reviews themselves.)
+In the U.S. military, there is the concept of no-lone zones, and for specific tasks, there is a mandatory two-person requirement.
+This is to prevent a single individual from ever having access to certain systems or components that are critical to the overall process.
+This significantly reduces the attack service-- a single compromised individual can never make unilateral changes to something without someone else being aware of it.
 
-As such, at a bare minimum, **two** individuals touch *every single commit to our repositories*, and in normal operating tempo, that will be *three* individuals.
-Now, I'm under no illusion that Vipyr is a critical project, but it seems asinine to me that a group of rag-tag college students were able to directly implement a more robust
-review process than a critical project maintainer; even when our commits themselves largely extend past 2000 line diffs.
+![No-Lone Zone](nolonezone.jpg "No-Lone Zone [© Steven Miller CC BY 2.0](https://www.flickr.com/photos/aloha75/6109624143/)")
 
-Does this slow the pace of development down? Absolutely, there's zero questions about that. We would be much faster if we simply disregarded
-the review process entirely and allowed commits to our main branch from core developers. And realistically, our tolerance for security risks
-is actually fairly high-- we can accept a pretty large quantity of risk by virtue of the way our systems are designed and isolated.
-(I might cry over my cheerios for a few days if my tables get dropped, but it's not really going to affect our bottom line.)
+In open source software, I think this guiding principle needs to be embraced as well. The odds of a specific account getting compromised are
+reasonably high in aggregate, and even if the account isn't, the user may be. So the question that remains in the forefront of my mind is
+that in projects that prop up major portions of the broader open source community, why are we not examining these with the same level of scrutiny?
+This compromise could've had national security impacts; it could've had impacts on healthcare, government, legal, etc., systems. In fact, there aren't
+a lot of domains where this backdoor couldn't have impacted. The two-person principle is powerful.
 
-Now, it's easy to preach about this from atop a pedestal. Certainly we've never implemented any security vulnerabilites and footgunned ourselves in that regard.
-After all, I'm an infosec professional! Just kidding, we had a critical endpoint exposed on our API without authentication for months before a code security
-review caught it. But that just underpins the importance of these processes in general; without that review process, nobody would've seen it, and we would've
-been in for a world of hurt.
+But this is difficult to implement too, and has just as many edge cases-- if a single author is compromised, it can be presumed that they
+are in close working relationships. Would compromising a core maintainers account make it simpler to social engineer your way into compromising co-contributor
+accounts? Certainly-- if you are masquerading as an individual, you may be able to leverage that familiarity to obtain access to successive accounts.
+But I wouldn't consider this a failure of the model-- it is still an increase in the defensive posture of open source software, and adds to the collective
+work factor to perform these kind of compromises.
+
+Other risks to this model include networks of threat actors; or individuals masquerading on multiple accounts. While there isn't an elegant solution to this--
+if we all convert to this model tomorrow, we run the risk of threat actors simply creating new accounts, it isn't hard to look at the network of contributors
+of a specific project and select 'vouching authorities' for this two-person concept of code security instead of tolerating an entirely new project contributor
+to perform this action.
 
 To kind of realign ourselves with the question I posed, what does this actually mean for open source security though? Certainly we don't have the ability
 to arbitrarily assign key maintainers, and that may also introduce some concerns itself-- do you trust the person doing the code review? What if that person
@@ -103,21 +104,57 @@ Can you spot the issue? It's quite subtle, and hard to notice without an acute o
 cleanup efforts here actually disabled the sandbox check entirely by causing the code to error.
 
 Now, we can all point the finger at how we should've caught that, and I'm inclined to agree-- **we should have.** Collectively, the open source software community
-probably holds some blame for not encouraging (or enforcing, in some cases) the code security review process.
+probably holds some blame for not encouraging (or enforcing, in some cases) the code security review process. Linus' Law comes to mind in this respect.
+
+{{< typeit
+  tag=h3
+  lifeLike=true
+  speed=50
+>}}
+"Given enough eyeballs, all bugs are shallow." - The Cathedral and the Bazaar, Eric S. Raymond
+{{< /typeit >}}
 
 So how can we possibly fix this?
 
 ### Getting Involved in Security Reviews
 
 I would generally encourage individuals to get involved not only with the development of software in the open source ecosystems, but the security as well. Tools like
-Semgrep can act as excellent ways to amplify your sphere of influence as an application security professional or cybersecurity-inclined software engineer across
+[Semgrep](https://semgrep.dev) can act as excellent ways to amplify your sphere of influence as an application security professional or cybersecurity-inclined software engineer across
 a massive amoung of data.
 
 I'll never pretend to be a developer. My ability to produce code is limited at best, and I have all but a loose syntactic recognition of most languages aside from
-Java and Python. But what I do know is that I can take a demonstration of a vulnerability, write a [Semgrep](https://semgrep.dev/) rule, and apply that knowledge across virtually
+Java and Python. But what I do know is that I can take a demonstration of a vulnerability, write a Semgrep rule, and apply that knowledge across virtually
 any codebase that I'd be interested in.
 
-Is this going to find binary malware? Nah-- we've got YARA for that (and in this case it wouldn't have done a whole lot), but we it isn't an extreme
+```yaml
+rules:
+- id: insecure-use-gets-fn
+  pattern: gets(...)
+  message: >-
+    Avoid 'gets()'. This function does not consider buffer boundaries and can lead
+    to buffer overflows. Use 'fgets()' or 'gets_s()' instead.
+  metadata:
+    cwe:
+    - 'CWE-676: Use of Potentially Dangerous Function'
+    references:
+    - https://us-cert.cisa.gov/bsi/articles/knowledge/coding-practices/fgets-and-gets_s
+    category: security
+    technology:
+    - c
+    confidence: MEDIUM
+    subcategory:
+    - audit
+    likelihood: LOW
+    impact: HIGH
+  languages: [c]
+  severity: ERROR
+```
+
+{{< lead >}}
+Semgrep rule detecting potential buffer overflow vulnerabilities in C
+{{< /lead >}}
+
+Is this going to find binary malware? No-- we've got YARA for that (and in this case it wouldn't have done a whole lot), but we it isn't an extreme
 leap to look at the current code and go *"Well, wait, we could've prevented some of this."* And that's where I rest my entire argument. We have the tools
 to start looking at open source security more critically than we currently do, and to exert professional knowledge across numerous domains.
 
@@ -127,7 +164,7 @@ period of time. Consequentially, I know this to be an accomplishable task. While
 
 As such, if you're a security professional and open source security enthusiast, a wonderful opportunity for you to get involved is to write rules
 to detect behaviors such as this; and to embrace wholesale the idea that security contributions to the broader open-source ecosystem can actually
-be in the form of aggregate detection instead of raw *Hey your authentication here isn't working!* (Though both aren't bad either!)
+be in the form of aggregate detection instead of raw *"Hey your authentication here isn't working!"* (Though both aren't bad either!)
 
 ## Combinatorial Explosion: A Dependency Issue
 
@@ -145,8 +182,8 @@ I do not care how big your development team is, you cannot possibly secure this 
 some arbitrary code entry into your codebase. So... how do we secure this?
 
 The answer: **You probably can't.** At least, not in the way you're thinking of. It seems reasonable to me to review new introductions into your SBOM
-itself; I would like to know when I have a new package added or removed from my dependency list. And I will and brief myself on changes
-to this overview of my code composition. But I cannot possibly dictate the level of time it might take to review any changes to these dependencies themselves.
+itself; I would like to know when I have a new package added or removed from my dependency list. And I often do, and brief myself on changes
+to this overview of my code composition. But I cannot possibly dedicate the level of time it might take to review any changes to these dependencies themselves.
 
 ### Enter Software Composition Analyis (SCA)
 
@@ -158,9 +195,18 @@ If we take aggregate threat information from various feeds such as Github Securi
 static application security testing (SAST) solutions like Semgrep, Snyk, etc., and we apply them across our entire SBOM, we kind of arrive at a very
 simple SCA system.
 
+There is governmental precedent for this in the form of the Office of National Cyber Director (ONCD)'s report on memory safety and security measurability.
+
+> To make progress toward securing the digital ecosystem, it is necessary to realign incentives to
+> favor long-term investments. For this realignment to generate ecosystem-wide behavior change, it
+> is critical to develop empirical metrics that measure the cybersecurity quality of software. This will
+> help inform both producer and consumer decision-making, as well as public policymaking efforts.
+
+- *[Back to the Building Blocks: A Path Toward Secure and Measurable Software, 2024](https://www.whitehouse.gov/wp-content/uploads/2024/02/Final-ONCD-Technical-Report.pdf)*
+
 If we track the flow of potentially untrusted code entering our source code and the various means in which it's being added, we can start to build out
 a threatmap of sourcecode that might be more or less secure, and prioritize our review efforts towards these sources. This makes the dependency issue a bit more digestable.
-Instead of reviewing 900 packages, I can now trust that Snyk probably did due dilligence in scanning (or at least, a better job than I'll do) on
+Instead of reviewing 900 packages, I can now trust that organizations like Snyk probably did due dilligence in scanning (or at least, a better job than I'll do) on
 a large portion of these packages, and focus myself on packages that have not yet reached maturity that may be introduced into my codebase, or packages
 with lower maintainer reputation scores, etc., as my threat model dictates.
 
