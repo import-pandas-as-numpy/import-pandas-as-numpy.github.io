@@ -10,6 +10,7 @@ rtl = false
 dateFormat = "2 January 2006"
 description = "A personal blog for malware analysis, open source security, capture the flags, and all things information security."
 logo = "vipyrlogocolor.png"
+secondaryLogo = "vipyrlogowhite.png"
 
 [author]
 name = "sudorem"
