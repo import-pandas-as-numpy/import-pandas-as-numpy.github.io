@@ -13,7 +13,7 @@ work is a frustrating idea conceptually.
 
 However, it creates some interesting security implications on the broader open-source ecosystem.
 Obviously, and principally, it's no longer open-source. Quite problematically, while this is
-often add odds with the very idea of open-source, many open-source ecosystems will proliferate
+often at odds with the very idea of open-source, many open-source ecosystems will proliferate
 these codebases regardless of intent-- and it's shockingly difficult to mandate that code remain
 in cleartext within a given software package repository.
 
