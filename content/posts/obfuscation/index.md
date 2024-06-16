@@ -3,7 +3,7 @@ title: "Obfuscation: An Open-Source Nightmare"
 date: 2024-06-11T00:00:00-05:00
 draft: false
 tags: ['open source','security']
-summary: "Discussing obfuscation and its affect on the broader open-source supply chain."
+summary: "Discussing obfuscation and its effect on the broader open-source supply chain."
 ---
 
 Obfuscation presents a highly reccuring topic of discussion in many development communities.
@@ -23,7 +23,7 @@ in cleartext within a given software package repository.
 
 Some of the beauty, I think, in open-source software is that it's typically 'unmoderated'. There's
 obviously some guiding principles, but the implication is that it is not governed by some broader
-entity that makdes decisions on how code can and cannot be used-- thus empowering developers to
+entity that makes decisions on how code can and cannot be used-- thus empowering developers to
 maintain and make those decisions. Imagine for a moment the idea that some guiding body elects to
 state that VPN's that evade restrictive geofencing of websites are no longer ethical because they
 violate local laws. This is obviously highly prboblematic, and I think this is why OSS/FOSS gains
