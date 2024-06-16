@@ -1,9 +1,9 @@
 ---
-title: "The Obfuscation Dilemma"
+title: "Obfuscation: An Open-Source Nightmare"
 date: 2024-06-11T00:00:00-05:00
 draft: false
 tags: ['open source','security']
-summary: "Discussing obfsucation and its affect on the broader open-source supply chain."
+summary: "Discussing obfuscation and its affect on the broader open-source supply chain."
 ---
 
 Obfuscation presents a highly reccuring topic of discussion in many development communities.
