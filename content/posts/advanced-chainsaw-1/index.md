@@ -176,7 +176,7 @@ contains the string 4624. Not ideal. Let's fix that!
 
 Remember how we discussed the key-value relationship of event logs previously? We will now apply that
 knowledge to our queries. Referring to my previous query, I may actually be looking for event ID
-4624, which is a successful network login.
+4624, which is a successful login.
 
 Refer to our previous Chainsaw output for some syntax clues, but maybe we want to drill down on the
 `Event.System.EventID` parameter. Well, we can do that with Tau. Tau takes an 'expression' and will
