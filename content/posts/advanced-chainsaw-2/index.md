@@ -10,7 +10,7 @@ summary: Creating our own Chainsaw rules and event log parsing using both simula
 
 This is part two of my blog discussing some of the more nuanced usage of WithSecure's forensic
 artifact parsing tool, Chainsaw. If you haven't read part 1, you can do so by clicking on the link
-[here.](https://sudorem.dev/advanced-chainsaw-1/)
+[here.](https://sudorem.dev/posts/advanced-chainsaw-1/)
 
 The scope of this post will be largely limited to Chainsaw Rules, as I believe Sigma is well
 documented at this point. We'll do this using a 'crawl, walk and run' approach.
