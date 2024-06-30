@@ -26,7 +26,7 @@ ruleset to destructure arrays in ASP.NET logs.
 
 Chainsaw rules are YAML documents that essentially act as reusable Tau queries. Recall that Tau is
 Chainsaw's documentation tagging syntax,and takes advantage of a key-value relationship. To refresh
-ourselves further, we might look at a simple Tau query: `Event.System.EventID: =4624` This look in
+ourselves further, we might look at a simple Tau query: `Event.System.EventID: =4624` This looks in
 the Event key, which contains the System key, which contains the EventID key, and 'tag' documents
 that match our expression. In this case, that expression is checking for equality to 4624. This
 simple Tau query checks for Event ID 4624, which is commonly associated with account logins.
@@ -278,7 +278,7 @@ aggregate:
 
 Aggregate takes two general arguments. We define a **count**, which is a numerical expression that is
 evaluated, and only combined occurences of that event that satisfy the criteria will be aggregated.
-In the above exmaple, we have said `>1`, or scenarios where the count is greater than one. In other
+In the above example, we have said `>1`, or scenarios where the count is greater than one. In other
 words, if a single event has occured, please don't aggregate it, just print it directly.
 
 The second parameter, **fields** are the columns to aggregate upon. In this scenario, we are saying
