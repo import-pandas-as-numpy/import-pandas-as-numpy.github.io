@@ -1,9 +1,13 @@
 ---
-title: "Chainsaw: Basics and Beyond - Part 1"
+title: "Chainsaw Search"
 date: 2024-06-22T00:00:00-05:00
 draft: false
 tags: ['security', 'chainsaw']
-summary: "Discussing Chainsaw's Search behavior and Tau syntax in a multipart blog series about creating both basic and advanced Chainsaw queries for rapid Windows Event log parsing."
+summary: "A brief introduction to Chainsaw's search feature and the document tagging engine, Tau, that WithSecure released in the most recent major Chainsaw update. We will discuss and demystify some of the nuance of Tau's query behavior, and apply these to hands on examples of simple queries that can be utilized to detect evil across numerous event logs with high fidelity."
+series: ['Chainsaw: Basics and Beyond']
+series_order: 1
+showHero: article.showHero
+heroStyle: background
 ---
 
 Before reading this blog post, I highly recommend viewing the a blog written by my coworker titled
