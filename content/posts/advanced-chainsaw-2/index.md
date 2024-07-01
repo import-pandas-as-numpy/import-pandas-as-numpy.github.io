@@ -1,11 +1,15 @@
 ---
-title: "Chainsaw: Basics and Beyond - Part 2"
+title: "Chainsaw Hunt & Rules"
 date: 2024-06-26T00:00:00-05:00
 draft: false
 tags:
   - security
   - chainsaw
-summary: Creating our own Chainsaw rules and event log parsing using both simulated and real world engagements.
+summary: "Chainsaw's hunt feature, along with Chainsaw's rule engine, is an excellent way to hunt for evil at scale and create reusable, maintainable queries for rapid triage. We will apply this to both simulated red team engagements and real world compromises to detect lateral movement, Impacket, and even ASP.NET compromises."
+series: ['Chainsaw: Basics and Beyond']
+series_order: 2
+showHero: article.showHero
+heroStyle: background
 ---
 
 This is part two of my blog discussing some of the more nuanced usage of WithSecure's forensic

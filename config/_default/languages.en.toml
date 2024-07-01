@@ -15,6 +15,6 @@ secondaryLogo = "vipyrlogowhite.png"
 [author]
 name = "sudorem"
 headline = "Malware Analyst, OSS Security Enthusiast"
-links = [ { github = "https://github.com/import-pandas-as-numpy" }, { mastodon = "https://fosstodon.org/@sudo_rem" }, { twitter = "https://twitter.com/sudo_Rem" } ]
+links = [ { github = "https://github.com/import-pandas-as-numpy" }, { mastodon = "https://infosec.exchange/@sudorem" }, { twitter = "https://twitter.com/sudo_Rem" } ]
 image = "otterpfp.png"
 bio = "Incident Handler | Founder, Vipyr Security"
