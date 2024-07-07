@@ -37,7 +37,6 @@ in enterprise-sized domains.
 Founder & detection engineer implementing hand-written YARA schema to detect and mitigate at-scale supply
 chain security threats on the Python Package Index. Led program design specifications for cluster-based
 code security engine.
-{{< github repo="vipyrsec/dragonfly" >}}
 {{< /timelineItem >}}
 
 {{< timelineItem icon="check" header="Wells Fargo" subheader="Risk Management Analyst" >}}
