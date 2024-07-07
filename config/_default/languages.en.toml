@@ -13,8 +13,8 @@ logo = "vipyrlogocolor.png"
 secondaryLogo = "vipyrlogowhite.png"
 
 [author]
-name = "sudorem"
-headline = "Malware Analyst, OSS Security Enthusiast"
+name = "Mike (Rem)"
+headline = "Blue Teamer, Malware Analyst, OSS Security Enthusiast"
 links = [ { github = "https://github.com/import-pandas-as-numpy" }, { mastodon = "https://infosec.exchange/@sudorem" }, { twitter = "https://twitter.com/sudo_Rem" } ]
 image = "otterpfp.png"
-bio = "Incident Handler | Founder, Vipyr Security"
+bio = "GCIA, GCIH, GSEC | Founder, Vipyr Security"
