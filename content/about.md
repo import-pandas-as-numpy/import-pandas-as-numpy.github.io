@@ -3,6 +3,7 @@ showReadingTime: False
 showWordCount: False
 showDate: False
 showTableOfContents: False
+summary: "My name is Mike, also known by my handle "Rem" in most internet circles. I am a SANS Technology Institute student, with a focus on digital forensics and incident response. I am also involved in the Python Software Foundation as a supporting member, and dedicate a large portion of time towards open source security."
 ---
 
 # About Me
@@ -62,21 +63,11 @@ unit IT compliance auditing measures.
 - GIAC Information Security Fundamentals (GISF)
 - GIAC Foundational Cybersecurity Technologies (GFACT)
 
-## Tools & Languages
+## Publications & Referenced Work
 
-I am familiar with Linux, Mac, and Windows. I largely integrate my workflow between operating systems
-as necessary. I use a large collection of virtual machines to facilitate the handling and reversal
-of Malware, to include [Mandiant FLARE VM](https://github.com/mandiant/flare-vm) and [REMnux](https://remnux.org/)
-, as well as self-built toolkits in MintOS and Ubuntu.
-
-Additionally, I am familiar with debuggers and decompilers/disassemblers such as [Ghidra](https://ghidra-sre.org/),
-[IDA Pro](https://hex-rays.com/ida-pro/) and [Radare2](https://rada.re). I've also authored my own
-disassembly toolkits to facilitate reverse engineering of specific files or executables on an ad-hoc
-basis.
-
-Most of my projects are written in Python, but I'm reasonably familiar with Java and Typescript,
-and currently spend a large portion of my time learning C++, Ruby, and the odds and ends snippets of
-other languages as they become applicable, or as my interests wander.
+- [When Trust Becomes a Trap: How Huntress Foiled a Medical Software Update Hack](https://www.huntress.com/blog/when-trust-becomes-a-trap-how-huntress-foiled-a-medical-software-update-hack)
+- [Mapping Threats with DNSTwist and the Internet Storm Center](https://isc.sans.edu/diary/Mapping+Threats+with+DNSTwist+and+the+Internet+Storm+Center+Guest+Diary/31188/)
+- [Respawning Malware Persists on PyPI](https://blog.phylum.io/respawning-malware-persists-on-pypi/)
 
 ## Accolades
 
