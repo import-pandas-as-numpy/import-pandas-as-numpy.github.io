@@ -3,7 +3,6 @@ showReadingTime: False
 showWordCount: False
 showDate: False
 showTableOfContents: False
-summary: "My name is Mike, also known by my handle "Rem" in most internet circles. I am a SANS Technology Institute student, with a focus on digital forensics and incident response. I am also involved in the Python Software Foundation as a supporting member, and dedicate a large portion of time towards open source security."
 ---
 
 # About Me
