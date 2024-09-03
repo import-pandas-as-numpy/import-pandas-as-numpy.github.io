@@ -55,6 +55,7 @@ unit IT compliance auditing measures.
 
 ## Certifications
 
+- GIAC Certified Forensic Examiner (GCFE)
 - GIAC Certified Intrusion Analyst (GCIA)
 - GIAC Python Coder (GPYC)
 - GIAC Certified Incident Handler (GCIH)
