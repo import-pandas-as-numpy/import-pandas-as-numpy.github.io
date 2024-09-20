@@ -65,10 +65,11 @@ unit IT compliance auditing measures.
 
 ## Publications & Referenced Work
 
-- [Cracks in the Foundation: Intrusions of FOUNDATION Accounting Software](https://www.huntress.com/blog/cracks-in-the-foundation-intrusions-of-foundation-accounting-software)
-- [When Trust Becomes a Trap: How Huntress Foiled a Medical Software Update Hack](https://www.huntress.com/blog/when-trust-becomes-a-trap-how-huntress-foiled-a-medical-software-update-hack)
-- [Mapping Threats with DNSTwist and the Internet Storm Center](https://isc.sans.edu/diary/Mapping+Threats+with+DNSTwist+and+the+Internet+Storm+Center+Guest+Diary/31188/)
-- [Respawning Malware Persists on PyPI](https://blog.phylum.io/respawning-malware-persists-on-pypi/)
+- [Gleaming Pisces Poisoned Python Packages Campaign Delivers PondRAT Linux and MacOS Backdoors](https://unit42.paloaltonetworks.com/gleaming-pisces-applejeus-poolrat-and-pondrat/) - 18 September 2024, Unit 42
+- [Cracks in the Foundation: Intrusions of FOUNDATION Accounting Software](https://www.huntress.com/blog/cracks-in-the-foundation-intrusions-of-foundation-accounting-software) - 14 September 2024, Huntress
+- [Mapping Threats with DNSTwist and the Internet Storm Center](https://isc.sans.edu/diary/Mapping+Threats+with+DNSTwist+and+the+Internet+Storm+Center+Guest+Diary/31188/) - 20 August 2024, Huntress
+- [When Trust Becomes a Trap: How Huntress Foiled a Medical Software Update Hack](https://www.huntress.com/blog/when-trust-becomes-a-trap-how-huntress-foiled-a-medical-software-update-hack) - 23 July 2024, Huntress
+- [Respawning Malware Persists on PyPI](https://blog.phylum.io/respawning-malware-persists-on-pypi/) - 16 May 2023, Phylum
 
 ## Accolades
 
