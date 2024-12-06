@@ -8,14 +8,12 @@ showTableOfContents: False
 # About Me
 
 My name is **Mike**, also known by my handle "Rem" in most internet circles. I am a SANS Technology
-Institute student, with a focus on digital forensics and incident response. I am also involved in the
+Institute graduate, with a focus on digital forensics and incident response. I am also involved in the
 Python Software Foundation as a supporting member, and dedicate a large portion of time towards open
 source security.
 
 Professionally, I work at [Huntress](https://www.huntress.com/) as a security analyst by day and run
 a Cybersecurity organization of my own called [Vipyr Security](https://vipyrsec.com/) by night.
-At the time of writing this, I am also performing an internship at the [SANS Internet Storm Center](https://isc.sans.edu/)
-as a handler.
 
 I can also be found on the [Python Discord](https://pythondiscord.com), where I contribute frequently towards
 Cybersecurity related discussions and help steer new members towards appropriate resources, answer questions,
@@ -53,8 +51,10 @@ unit IT compliance auditing measures.
 
 {{< /timeline >}}
 
-## Certifications
+## Certifications & Education
 
+- GIAC Enterprise Penetration Tester (GPEN)
+- GIAC Certified Forensic Analyst (GCFA)
 - GIAC Certified Forensic Examiner (GCFE)
 - GIAC Certified Intrusion Analyst (GCIA)
 - GIAC Python Coder (GPYC)
@@ -65,6 +65,7 @@ unit IT compliance auditing measures.
 
 ## Publications & Referenced Work
 
+- [Managed SIEM and the Art of Perfecting Cyber Defense](https://www.huntress.com/blog/managed-siem-and-the-art-of-perfecting-cyber-defense) - 5 December 2024, Huntress
 - [Gleaming Pisces Poisoned Python Packages Campaign Delivers PondRAT Linux and MacOS Backdoors](https://unit42.paloaltonetworks.com/gleaming-pisces-applejeus-poolrat-and-pondrat/) - 18 September 2024, Unit 42
 - [Cracks in the Foundation: Intrusions of FOUNDATION Accounting Software](https://www.huntress.com/blog/cracks-in-the-foundation-intrusions-of-foundation-accounting-software) - 14 September 2024, Huntress
 - [Mapping Threats with DNSTwist and the Internet Storm Center](https://isc.sans.edu/diary/Mapping+Threats+with+DNSTwist+and+the+Internet+Storm+Center+Guest+Diary/31188/) - 20 August 2024, SANS Internet Storm Center
