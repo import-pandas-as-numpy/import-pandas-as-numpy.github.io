@@ -12,7 +12,7 @@ Institute graduate, with a focus on digital forensics and incident response. I a
 Python Software Foundation as a supporting member, and dedicate a large portion of time towards open
 source security.
 
-Professionally, I work at [Huntress](https://www.huntress.com/) as a security analyst by day and run
+Professionally, I work at [Huntress](https://www.huntress.com/) as a senior security analyst by day and run
 a Cybersecurity organization of my own called [Vipyr Security](https://vipyrsec.com/) by night.
 
 I can also be found on the [Python Discord](https://pythondiscord.com), where I contribute frequently towards
@@ -23,7 +23,7 @@ and assist in internal projects.
 
 {{< timeline >}}
 
-{{< timelineItem icon="shield" header="Huntress" badge="Present" subheader="Security Analyst" >}}
+{{< timelineItem icon="shield" header="Huntress" badge="Present" subheader="Senior Security Analyst" >}}
 <img src=../images/huntress_logo.jpg style="margin: auto; padding: 10px; pointer-events: none;"></img>
 Security analyst levying malware reverse engineering skills to detect, triage, and mitigate security
 threats. Experienced in ELK, Sigma, YARA, Python, and Typescript with a focus on detection and response
