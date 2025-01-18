@@ -17,4 +17,4 @@ name = "Mike (Rem)"
 headline = "Blue Teamer, Malware Analyst, OSS Security Enthusiast"
 links = [ { github = "https://github.com/import-pandas-as-numpy" }, { mastodon = "https://infosec.exchange/@sudorem" }, { twitter = "https://twitter.com/sudo_Rem" } ]
 image = "otterpfp.png"
-bio = "GCFE, GCIA, GCIH | Founder, Vipyr Security"
+bio = "GCFA, GCFE, GCIA, GPEN, GCIH | Founder, Vipyr Security"
