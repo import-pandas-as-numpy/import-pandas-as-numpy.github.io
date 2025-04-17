@@ -75,6 +75,7 @@ unit IT compliance auditing measures.
 
 ## Accolades
 
+- Deans List - SANS Institute Fall 2024
 - Deans List - SANS Institute Spring 2024
 - PicoCTF 2024 - 138/6957, Global Leaderboard
 - NCL Spring 2024 - 33/7412, Individual
