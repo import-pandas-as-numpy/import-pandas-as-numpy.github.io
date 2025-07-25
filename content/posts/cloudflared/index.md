@@ -29,7 +29,11 @@ in its use, finding deployment in numerous production systems as a way for syste
 utilize its features to remotely access hosts, deploy web applications, and interact with administrator
 tools without exposing them to the broad internet.
 
-![Cloudflared Management Page](cloudflared-management.png "Figure 1. Cloudflared Management Panel")
+{{< figure
+    src="cloudflared-management.png"
+    alt="Cloudflared Management Page"
+    caption="Figure 1. Cloudflared Management Panel"
+    >}}
 
 ## Adversarial Activity
 
