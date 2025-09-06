@@ -12,7 +12,7 @@ heroStyle: background
 
 # Introduction
 
-[Anton Ovutsky](https://x.com/Antonlovesdnb), my coworker and phenomenal human being, has spent a significant amount of time
+[Anton Ovrutsky](https://x.com/Antonlovesdnb), my coworker and phenomenal human being, has spent a significant amount of time
 instrumenting a Fortigate SSLVPN honeypot with Finch's HTTP(S) reverse proxy. Resultantly, we can pretend we're
 GreyNoise now in our downtime-- without the existential dread about the state of the internet (great), or the stock options (not great).
 
