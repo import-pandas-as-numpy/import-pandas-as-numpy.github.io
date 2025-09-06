@@ -10,7 +10,7 @@ showHero: article.showHero
 heroStyle: background
 ---
 
-# Introduction
+## Introduction
 
 [Anton Ovrutsky](https://x.com/Antonlovesdnb), my coworker and phenomenal human being, has spent a significant amount of time
 instrumenting a Fortigate SSLVPN honeypot with Finch's HTTP(S) reverse proxy. Resultantly, we can pretend we're
@@ -26,7 +26,7 @@ living on the other side of the security stack for a change.
 
 Anyway, let's talk tech for a minute before we go further.
 
-## General Architecture
+### General Architecture
 
 For this deployment, we're running a FortiGate-60F (FG-60F) series firewall device on v7.2.10 build 1706. 
 The device itself sits behind [Finch](https://github.com/0x4D31/finch), a fingerprinting TLS reverse proxy.
@@ -47,7 +47,7 @@ time this SSLVPN has been deployed, we haven't noted much in the way of anomalie
 I'm sure that'll change... (foreshadowing) 
 {{< /lead >}}
 
-# Analysis
+## Analysis
 
 For our analysis, we'll largely be using ES|QL and Kibana. I've found that the query engine is enough
 for us to summarize our data. We may consider AS enrichment via MaxMind at some point in the future, 
@@ -56,7 +56,7 @@ but for now, gud’nuff is good enough.
 We'll define broad patterns as subheadings in this section, and then discuss the implications of the patterns
 we observe. 
 
-## Trends at a High Level
+### Trends at a High Level
 
 I find this a bit dull, but I’d be remiss if I made all these cool dashboard graphics and didn't include them.
 First, geographic distribution of source IPs that hit the honeypot. 
@@ -79,7 +79,7 @@ you've unintentionally exposed accounts that should not have access to SSLVPN-- 
 
 [Wonder if we've seen that happening anywhere else... (More foreshadowing)](https://www.sonicwall.com/support/knowledge-base/ldap-configuration-sslvpn-default-user-groups-security-risk/250813061722917)
 
-## Terrible Triplets
+### Terrible Triplets
 
 In my primary hustle at Huntress, I'm running point on SonicWall SSLVPN compromises and analyzing data
 pertaining to the significant uptick in ransomware cases spurred from these events. One of the chief
@@ -116,7 +116,7 @@ While there's no reason to allow an adversary from Ukraine to freely bruteforce 
 relying solely on Geo-IP filtering is probably the digital equivalent to placing a "Do Not Enter" sign to deter
 a hurricane. Good luck. 
 
-## Automated Password Enumeration
+### Automated Password Enumeration
 
 I'm not sure why this wasn't something I'd considered prior to observing this honeypot, but adversaries
 will actively snag the domain or characteristics of the website for use in password lists.
@@ -143,11 +143,11 @@ choice here. That’s not to say we haven’t seen attempts on specific username
 fictitious company-- just that they’re rare enough to make us question whether humans or bots are having 
 a mild identity crisis.
 
-## Resource Request Anomalies
+### Resource Request Anomalies
 
 We capture resources requested and header parameters, so let's take a look at those now... 
 
-### Botnets and Background
+#### Botnets and Background
 
 We're greeted with some usual suspects here. I tend to automatically quell standard botnet behavior from honeypots because, frankly,
 it just ends up becoming noise. But we do get RedTail hits on the honeypot. 
@@ -174,7 +174,7 @@ All PHPUnit access attempts stemmed from IP `212.113.102[.]147`, but it seemed t
 This used the user agent `Custom-AsyncHttpClient`, which is well known for attempting to access PHP-related resources,
 and is, at this point, standard internet background noise. 
 
-### Chinese Greetings
+#### Chinese Greetings
 
 Now we're cooking. Chinanet paid us a visit from IP `106.75.189[.]197`:
 
@@ -196,7 +196,7 @@ What's that? No clue. Some googling of the requested resource pointed me to [Rot
 a Linux backdoor. That would imply our above payload is AES-encrypted, XOR’d, ROT’d, and ZLIB-compressed. I'm not going to get through that--
 so the specific request details can be left as an exercise for the reader to muse on. 
 
-### CVE-2024-55591
+#### CVE-2024-55591
 
 We're also availed with some vuln-scanning behavior from various internet scanners. We actually reached out to WatchTowr about these,
 who let us know that this is likely [The Shadowserver Foundation](https://www.shadowserver.org/) doing vulnerability scanning for
@@ -229,7 +229,7 @@ the implications here-- someone has pilfered patricia's credentials, and is curr
 
 This may indicate that an adversary has thefted this user's credentials, but don't know what they go to. Hence, the spray. 
 
-# Conclusion
+## Conclusion
 
 Honeypots are useful-ish. *Who knew?* None of this exactly groundbreaking-- but hey, look at all the pretty charts
 we can make! In the future, with more data, I imagine we'll find something at least remotely novel. 
