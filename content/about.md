@@ -64,6 +64,8 @@ unit IT compliance auditing measures.
 - GIAC Foundational Cybersecurity Technologies (GFACT)
 
 ## Publications & Referenced Work
+
+- [How an Attacker’s Blunder Gave Us a Rare Look Inside Their Day-to-Day Operations](https://www.huntress.com/blog/rare-look-inside-attacker-operation) - 09 September 2025, Huntress
 - [Huntress Threat Advisory: Active Exploitation of SonicWall VPNs](https://www.huntress.com/blog/exploitation-of-sonicwall-vpn) - 04 August 2025, Huntress
 - [Wing FTP Server Remote Code Execution (CVE-2025-47812) Exploited in the Wild](https://www.huntress.com/blog/wing-ftp-server-remote-code-execution-cve-2025-47812-exploited-in-wild) - 10 July 2025, Huntress
 - [CVE-2025-30406 - Critical Gladinet CentreStack & Triofox Vulnerability Exploited In The Wild](https://www.huntress.com/blog/cve-2025-30406-critical-gladinet-centrestack-triofox-vulnerability-exploited-in-the-wild) - 14 April 2025, Huntress
