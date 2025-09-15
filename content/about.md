@@ -69,6 +69,7 @@ unit IT compliance auditing measures.
 - [Huntress Threat Advisory: Active Exploitation of SonicWall VPNs](https://www.huntress.com/blog/exploitation-of-sonicwall-vpn) - 04 August 2025, Huntress
 - [Wing FTP Server Remote Code Execution (CVE-2025-47812) Exploited in the Wild](https://www.huntress.com/blog/wing-ftp-server-remote-code-execution-cve-2025-47812-exploited-in-wild) - 10 July 2025, Huntress
 - [CVE-2025-30406 - Critical Gladinet CentreStack & Triofox Vulnerability Exploited In The Wild](https://www.huntress.com/blog/cve-2025-30406-critical-gladinet-centrestack-triofox-vulnerability-exploited-in-the-wild) - 14 April 2025, Huntress
+- [Hunt for RedCurl](https://www.huntress.com/blog/the-hunt-for-redcurl-2) - 03 March 2025, Huntress
 - [Managed SIEM and the Art of Perfecting Cyber Defense](https://www.huntress.com/blog/managed-siem-and-the-art-of-perfecting-cyber-defense) - 5 December 2024, Huntress
 - [Gleaming Pisces Poisoned Python Packages Campaign Delivers PondRAT Linux and MacOS Backdoors](https://unit42.paloaltonetworks.com/gleaming-pisces-applejeus-poolrat-and-pondrat/) - 18 September 2024, Unit 42
 - [Cracks in the Foundation: Intrusions of FOUNDATION Accounting Software](https://www.huntress.com/blog/cracks-in-the-foundation-intrusions-of-foundation-accounting-software) - 14 September 2024, Huntress
