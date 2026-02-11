@@ -63,39 +63,6 @@
   ) -}}
 {{- end -}}
 <div class="pub-layout">
-  <div class="pub-table-wrap">
-    <table class="pub-table">
-      <thead>
-        <tr>
-          <th>Preview</th>
-          <th>Publication</th>
-          <th>Source</th>
-          <th>Date</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{- range $row := $rows -}}
-          <tr>
-            <td>
-              {{- if $row.image -}}
-                <a href="{{ $row.url }}" target="_blank" rel="noopener noreferrer">
-                  <img src="{{ $row.image }}" alt="{{ $row.title }} preview image" loading="lazy" decoding="async" />
-                </a>
-              {{- else -}}
-                <div class="pub-img-placeholder">No image</div>
-              {{- end -}}
-            </td>
-            <td>
-              <a href="{{ $row.url }}" target="_blank" rel="noopener noreferrer">{{ $row.title }}</a>
-              {{- if $row.summary -}}<p>{{ $row.summary }}</p>{{- end -}}
-            </td>
-            <td>{{ $row.source }}</td>
-            <td>{{ $row.date }}</td>
-          </tr>
-        {{- end -}}
-      </tbody>
-    </table>
-  </div>
   <div class="pub-cards">
     {{- range $row := $rows -}}
       <article class="pub-card">
