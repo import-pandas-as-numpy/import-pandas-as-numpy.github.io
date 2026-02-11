@@ -1,0 +1,115 @@
+/* Expand prose width on the About page while keeping normal article readability elsewhere. */
+main article:has(h1#about-me) {
+  max-width: min(110rem, calc(100vw - 2.5rem));
+}
+
+main article:has(h1#about-me) .max-w-prose,
+main article:has(h1#about-me) .prose {
+  max-width: 96rem;
+}
+
+.pub-table-wrap {
+  margin-top: 1.25rem;
+  overflow-x: auto;
+}
+
+.pub-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+
+.pub-table th,
+.pub-table td {
+  vertical-align: top;
+  border-bottom: 1px solid color-mix(in oklab, currentColor 18%, transparent);
+  padding: 0.85rem;
+}
+
+.pub-table th {
+  text-align: left;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pub-table th:nth-child(1),
+.pub-table td:nth-child(1) {
+  width: 220px;
+}
+
+.pub-table th:nth-child(3),
+.pub-table td:nth-child(3) {
+  width: 160px;
+}
+
+.pub-table th:nth-child(4),
+.pub-table td:nth-child(4) {
+  width: 130px;
+  white-space: nowrap;
+}
+
+.pub-table img {
+  width: 100%;
+  max-width: 210px;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border-radius: 0.5rem;
+}
+
+.pub-table td p {
+  margin-top: 0.45rem;
+  margin-bottom: 0;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  opacity: 0.9;
+}
+
+.pub-img-placeholder {
+  width: 100%;
+  max-width: 210px;
+  aspect-ratio: 16 / 9;
+  border: 1px dashed color-mix(in oklab, currentColor 30%, transparent);
+  border-radius: 0.5rem;
+  display: grid;
+  place-items: center;
+  font-size: 0.8rem;
+  opacity: 0.75;
+}
+
+@media (max-width: 900px) {
+  .pub-table,
+  .pub-table thead,
+  .pub-table tbody,
+  .pub-table tr,
+  .pub-table th,
+  .pub-table td {
+    display: block;
+  }
+
+  .pub-table thead {
+    display: none;
+  }
+
+  .pub-table tr {
+    border-bottom: 1px solid color-mix(in oklab, currentColor 18%, transparent);
+    padding: 1rem 0;
+  }
+
+  .pub-table td {
+    border: 0;
+    padding: 0.35rem 0;
+    width: 100% !important;
+    white-space: normal !important;
+  }
+
+  .pub-table td:nth-child(3)::before {
+    content: "Source: ";
+    font-weight: 600;
+  }
+
+  .pub-table td:nth-child(4)::before {
+    content: "Date: ";
+    font-weight: 600;
+  }
+}

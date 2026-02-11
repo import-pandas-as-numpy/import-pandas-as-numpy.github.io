@@ -65,18 +65,7 @@ unit IT compliance auditing measures.
 
 ## Publications & Referenced Work
 
-- [How an Attacker’s Blunder Gave Us a Rare Look Inside Their Day-to-Day Operations](https://www.huntress.com/blog/rare-look-inside-attacker-operation) - 09 September 2025, Huntress
-- [Huntress Threat Advisory: Active Exploitation of SonicWall VPNs](https://www.huntress.com/blog/exploitation-of-sonicwall-vpn) - 04 August 2025, Huntress
-- [Wing FTP Server Remote Code Execution (CVE-2025-47812) Exploited in the Wild](https://www.huntress.com/blog/wing-ftp-server-remote-code-execution-cve-2025-47812-exploited-in-wild) - 10 July 2025, Huntress
-- [CVE-2025-30406 - Critical Gladinet CentreStack & Triofox Vulnerability Exploited In The Wild](https://www.huntress.com/blog/cve-2025-30406-critical-gladinet-centrestack-triofox-vulnerability-exploited-in-the-wild) - 14 April 2025, Huntress
-- [Hunt for RedCurl](https://www.huntress.com/blog/the-hunt-for-redcurl-2) - 03 March 2025, Huntress
-- [Managed SIEM and the Art of Perfecting Cyber Defense](https://www.huntress.com/blog/managed-siem-and-the-art-of-perfecting-cyber-defense) - 5 December 2024, Huntress
-- [Gleaming Pisces Poisoned Python Packages Campaign Delivers PondRAT Linux and MacOS Backdoors](https://unit42.paloaltonetworks.com/gleaming-pisces-applejeus-poolrat-and-pondrat/) - 18 September 2024, Unit 42
-- [Cracks in the Foundation: Intrusions of FOUNDATION Accounting Software](https://www.huntress.com/blog/cracks-in-the-foundation-intrusions-of-foundation-accounting-software) - 14 September 2024, Huntress
-- [Mapping Threats with DNSTwist and the Internet Storm Center](https://isc.sans.edu/diary/Mapping+Threats+with+DNSTwist+and+the+Internet+Storm+Center+Guest+Diary/31188/) - 20 August 2024, SANS Internet Storm Center
-- [When Trust Becomes a Trap: How Huntress Foiled a Medical Software Update Hack](https://www.huntress.com/blog/when-trust-becomes-a-trap-how-huntress-foiled-a-medical-software-update-hack) - 23 July 2024, Huntress
-- [APT Activity Report Q4 2023-Q1 2024: Iran-aligned Cyberattacks - Rise in Disruptive Operations](https://www.eset.com/us/business/resource-center/reports/apt-activity-report-q4-2023-q1-2024/) - May 2024, ESET
-- [Respawning Malware Persists on PyPI](https://blog.phylum.io/respawning-malware-persists-on-pypi/) - 16 May 2023, Phylum
+{{< publication-table >}}
 
 ## Accolades
 
@@ -90,3 +79,4 @@ unit IT compliance auditing measures.
 ## Getting in Touch
 
 The simplest way to contact me is through my Twitter handle [@sudo_Rem](https://twitter.com/sudo_Rem).
+
