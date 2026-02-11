@@ -1,0 +1,88 @@
+{{- $items := site.Data.publications.referenced_work -}}
+{{- if not $items -}}
+<p>No publications configured.</p>
+{{- else -}}
+<div class="pub-table-wrap">
+  <table class="pub-table">
+    <thead>
+      <tr>
+        <th>Preview</th>
+        <th>Publication</th>
+        <th>Source</th>
+        <th>Date</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{- range $item := $items -}}
+        {{- $url := $item.url -}}
+        {{- $title := $item.title -}}
+        {{- $summary := $item.summary | default "" -}}
+        {{- $image := $item.image | default "" -}}
+        {{- with resources.GetRemote $url -}}
+            {{- $html := printf "%s" .Content -}}
+
+            {{- if eq $title "" -}}
+              {{- $ogTitleTags := findRE `(?is)<meta[^>]+property=["']og:title["'][^>]+content=["']([^"']+)["'][^>]*>` $html 1 -}}
+              {{- $twTitleTags := findRE `(?is)<meta[^>]+name=["']twitter:title["'][^>]+content=["']([^"']+)["'][^>]*>` $html 1 -}}
+              {{- if gt (len $ogTitleTags) 0 -}}
+                {{- $title = replaceRE `(?is).*content=["']([^"']+)["'].*` "$1" (index $ogTitleTags 0) -}}
+              {{- else if gt (len $twTitleTags) 0 -}}
+                {{- $title = replaceRE `(?is).*content=["']([^"']+)["'].*` "$1" (index $twTitleTags 0) -}}
+              {{- end -}}
+            {{- end -}}
+
+            {{- if eq $summary "" -}}
+              {{- $twDescTags := findRE `(?is)<meta[^>]+name=["']twitter:description["'][^>]+content=["']([^"']+)["'][^>]*>` $html 1 -}}
+              {{- $ogDescTags := findRE `(?is)<meta[^>]+property=["']og:description["'][^>]+content=["']([^"']+)["'][^>]*>` $html 1 -}}
+              {{- $stdDescTags := findRE `(?is)<meta[^>]+name=["']description["'][^>]+content=["']([^"']+)["'][^>]*>` $html 1 -}}
+              {{- if gt (len $twDescTags) 0 -}}
+                {{- $summary = replaceRE `(?is).*content=["']([^"']+)["'].*` "$1" (index $twDescTags 0) -}}
+              {{- else if gt (len $ogDescTags) 0 -}}
+                {{- $summary = replaceRE `(?is).*content=["']([^"']+)["'].*` "$1" (index $ogDescTags 0) -}}
+              {{- else if gt (len $stdDescTags) 0 -}}
+                {{- $summary = replaceRE `(?is).*content=["']([^"']+)["'].*` "$1" (index $stdDescTags 0) -}}
+              {{- end -}}
+            {{- end -}}
+
+            {{- if eq $image "" -}}
+              {{- $twImageTags := findRE `(?is)<meta[^>]+(?:name|property)=["']twitter:image(?::src)?["'][^>]+content=["']([^"']+)["'][^>]*>` $html 1 -}}
+              {{- $ogImageTags := findRE `(?is)<meta[^>]+property=["']og:image(?::secure_url)?["'][^>]+content=["']([^"']+)["'][^>]*>` $html 1 -}}
+              {{- if gt (len $twImageTags) 0 -}}
+                {{- $image = replaceRE `(?is).*content=["']([^"']+)["'].*` "$1" (index $twImageTags 0) -}}
+              {{- else if gt (len $ogImageTags) 0 -}}
+                {{- $image = replaceRE `(?is).*content=["']([^"']+)["'].*` "$1" (index $ogImageTags 0) -}}
+              {{- end -}}
+
+              {{- if hasPrefix $image "//" -}}
+                {{- $image = printf "https:%s" $image -}}
+              {{- else if hasPrefix $image "/" -}}
+                {{- $origin := replaceRE `^(https?://[^/]+).*$` "$1" $url -}}
+                {{- $image = printf "%s%s" $origin $image -}}
+              {{- end -}}
+            {{- end -}}
+        {{- end -}}
+
+        {{- if eq $title "" -}}{{- $title = $url -}}{{- end -}}
+
+        <tr>
+          <td>
+            {{- if $image -}}
+              <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">
+                <img src="{{ $image }}" alt="{{ $title }} preview image" loading="lazy" decoding="async" />
+              </a>
+            {{- else -}}
+              <div class="pub-img-placeholder">No image</div>
+            {{- end -}}
+          </td>
+          <td>
+            <a href="{{ $url }}" target="_blank" rel="noopener noreferrer">{{ $title }}</a>
+            {{- if $summary -}}<p>{{ $summary }}</p>{{- end -}}
+          </td>
+          <td>{{ $item.source }}</td>
+          <td>{{ time.Format "02 Jan 2006" (time $item.date) }}</td>
+        </tr>
+      {{- end -}}
+    </tbody>
+  </table>
+</div>
+{{- end -}}
