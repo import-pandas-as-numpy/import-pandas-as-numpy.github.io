@@ -1,4 +1,12 @@
 referenced_work:
+  - title: "Employee Monitoring and SimpleHelp Software Abused in Ransomware Operations"
+    url: "https://www.huntress.com/blog/employee-monitoring-simplehelp-abused-in-ransomware-operations"
+    date: "2026-02-12"
+    source: "Huntress"
+  - title: "PeerBlight Linux Backdoor Exploits React2Shell CVE-2025-55182"
+    url: "https://www.huntress.com/blog/peerblight-linux-backdoor-exploits-react2shell"
+    date: "2025-12-09"
+    source: "Huntress"
   - title: "How an Attacker's Blunder Gave Us a Rare Look Inside Their Day-to-Day Operations"
     url: "https://www.huntress.com/blog/rare-look-inside-attacker-operation"
     date: "2025-09-09"
