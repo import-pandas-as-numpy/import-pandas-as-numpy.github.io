@@ -1,4 +1,8 @@
 referenced_work:
+  - title: "ClickFix Won't Die. Neither Will Matanbuchus. A New RAT and a Hands-on-Keyboard Intrusion"
+    url: "https://www.huntress.com/blog/clickfix-matanbuchus-astarionrat-analysis"
+    date: "2026-02-16"
+    source: "Huntress"
   - title: "Employee Monitoring and SimpleHelp Software Abused in Ransomware Operations"
     url: "https://www.huntress.com/blog/employee-monitoring-simplehelp-abused-in-ransomware-operations"
     date: "2026-02-12"
@@ -51,7 +55,3 @@ referenced_work:
     url: "https://www.eset.com/us/business/resource-center/reports/apt-activity-report-q4-2023-q1-2024/"
     date: "2024-05-01"
     source: "ESET"
-  - title: "Respawning Malware Persists on PyPI"
-    url: "https://blog.phylum.io/respawning-malware-persists-on-pypi/"
-    date: "2023-05-16"
-    source: "Phylum"
