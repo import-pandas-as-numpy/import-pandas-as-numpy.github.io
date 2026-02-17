@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: About Me
 description: "Senior Security Analyst at Huntress and founder of Vipyr Security, focused on open-source supply chain security, incident response, and malware analysis."
 summary: "Senior Security Analyst at Huntress and founder of Vipyr Security, focused on open-source supply chain security, incident response, and malware analysis."
 images:
@@ -10,8 +10,6 @@ showWordCount: False
 showDate: False
 showTableOfContents: False
 ---
-
-# About Me
 
 My name is **Mike**, also known by my handle "Rem" in most internet circles. I am a SANS Technology
 Institute graduate, with a focus on digital forensics and incident response. I am also involved in the
