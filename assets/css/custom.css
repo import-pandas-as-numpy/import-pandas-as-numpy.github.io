@@ -1,14 +1,9 @@
-/* Expand prose width on the About page while keeping normal article readability elsewhere. */
-main article:has(h1#about-me) {
-  max-width: min(132rem, calc(100vw - 3rem));
-}
-
-main article:has(h1#about-me) .max-w-prose,
-main article:has(h1#about-me) .prose {
+/* About page width tuning (scoped to the custom about layout). */
+.about-content.prose {
   max-width: min(122rem, 100%);
 }
 
-main article:has(h1#about-me) .pub-layout {
+.about-content .pub-layout {
   max-width: 100%;
 }
 
@@ -74,12 +69,7 @@ main article:has(h1#about-me) .pub-layout {
     grid-template-columns: 1fr;
   }
 
-  main article:has(h1#about-me) {
-    max-width: calc(100vw - 1.6rem);
-  }
-
-  main article:has(h1#about-me) .max-w-prose,
-  main article:has(h1#about-me) .prose {
+  .about-content.prose {
     max-width: 100%;
   }
 }
