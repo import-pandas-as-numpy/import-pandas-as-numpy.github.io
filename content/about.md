@@ -1,4 +1,5 @@
 ---
+layout: about
 showReadingTime: False
 showWordCount: False
 showDate: False
@@ -24,14 +25,14 @@ and assist in internal projects.
 {{< timeline >}}
 
 {{< timelineItem icon="shield" header="Huntress" badge="Present" subheader="Senior Security Analyst" >}}
-<img src=../images/huntress_logo.jpg style="margin: auto; padding: 10px; pointer-events: none;"></img>
+<img src=../images/huntress_logo.jpg style="margin: auto; padding: 10px; pointer-events: none; width: min(100%, 420px); height: auto;"></img>
 Security analyst levying malware reverse engineering skills to detect, triage, and mitigate security
 threats. Experienced in ELK, Sigma, YARA, Python, and Typescript with a focus on detection and response
 in enterprise-sized domains.
 {{< /timelineItem >}}
 
 {{< timelineItem icon="shield" header="Vipyr Security" badge="Present" subheader="Founder, Detection Engineer" >}}
-<img src=../images/vipyr_logo.jpg style="margin: auto; padding: 10px; pointer-events: none;"></img>
+<img src=../images/vipyr_logo.jpg style="margin: auto; padding: 10px; pointer-events: none; width: min(100%, 420px); height: auto;"></img>
 Founder & detection engineer implementing hand-written YARA schema to detect and mitigate at-scale supply
 chain security threats on the Python Package Index. Led program design specifications for cluster-based
 code security engine.
