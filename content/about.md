@@ -1,5 +1,10 @@
 ---
 layout: about
+title: About
+description: "Senior Security Analyst at Huntress and founder of Vipyr Security, focused on open-source supply chain security, incident response, and malware analysis."
+summary: "Senior Security Analyst at Huntress and founder of Vipyr Security, focused on open-source supply chain security, incident response, and malware analysis."
+images:
+  - /images/about-card-otter.png
 showReadingTime: False
 showWordCount: False
 showDate: False
